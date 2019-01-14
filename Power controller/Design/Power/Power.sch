@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Power-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_ATmega:ATmega328PB-MU U?
+L MCU_Microchip_ATmega:ATmega328PB-MU U1
 U 1 1 5C2CA652
 P 1500 2350
-F 0 "U?" H 1500 764 50  0000 C CNN
+F 0 "U1" H 1500 764 50  0000 C CNN
 F 1 "ATmega328PB-MU" H 1500 673 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm" H 1500 2350 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001906C.pdf" H 1500 2350 50  0001 C CNN
@@ -25,34 +26,34 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001906C.pdf" H 1500 2350 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y?
+L Device:Crystal Y1
 U 1 1 5C2CAD65
 P 2450 1700
-F 0 "Y?" V 2404 1831 50  0000 L CNN
+F 0 "Y1" V 2404 1831 50  0000 L CNN
 F 1 "16MHz" V 2495 1831 50  0000 L CNN
-F 2 "" H 2450 1700 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_TXC_7A-2Pin_5x3.2mm" H 2450 1700 50  0001 C CNN
 F 3 "~" H 2450 1700 50  0001 C CNN
 	1    2450 1700
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C1
 U 1 1 5C2CAFE0
 P 2800 1550
-F 0 "C?" V 2571 1550 50  0000 C CNN
+F 0 "C1" V 2571 1550 50  0000 C CNN
 F 1 "22pF" V 2662 1550 50  0000 C CNN
-F 2 "" H 2800 1550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2800 1550 50  0001 C CNN
 F 3 "~" H 2800 1550 50  0001 C CNN
 	1    2800 1550
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C2
 U 1 1 5C2CB02A
 P 2800 1850
-F 0 "C?" V 2663 1850 50  0000 C CNN
+F 0 "C2" V 2663 1850 50  0000 C CNN
 F 1 "22pF" V 2572 1850 50  0000 C CNN
-F 2 "" H 2800 1850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2800 1850 50  0001 C CNN
 F 3 "~" H 2800 1850 50  0001 C CNN
 	1    2800 1850
 	0    -1   -1   0   
@@ -71,43 +72,10 @@ Connection ~ 2900 1700
 Wire Wire Line
 	2900 1700 2900 1850
 $Comp
-L Transistor_FET:IRF6613 Q?
-U 1 1 5C2CC543
-P 8050 1200
-F 0 "Q?" H 8256 1246 50  0000 L CNN
-F 1 "IRF6613" H 8256 1155 50  0000 L CNN
-F 2 "Package_DirectFET:DirectFET_MT" H 8050 1200 50  0001 C CIN
-F 3 "https://www.infineon.com/dgdl/irf6613pbf.pdf?fileId=5546d462533600a4015355e82b9b1a0d" H 8050 1200 50  0001 L CNN
-	1    8050 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF6613 Q?
-U 1 1 5C2CC587
-P 8050 2150
-F 0 "Q?" H 8256 2196 50  0000 L CNN
-F 1 "IRF6613" H 8256 2105 50  0000 L CNN
-F 2 "Package_DirectFET:DirectFET_MT" H 8050 2150 50  0001 C CIN
-F 3 "https://www.infineon.com/dgdl/irf6613pbf.pdf?fileId=5546d462533600a4015355e82b9b1a0d" H 8050 2150 50  0001 L CNN
-	1    8050 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF6613 Q?
-U 1 1 5C2CC5BB
-P 8050 3100
-F 0 "Q?" H 8256 3146 50  0000 L CNN
-F 1 "IRF6613" H 8256 3055 50  0000 L CNN
-F 2 "Package_DirectFET:DirectFET_MT" H 8050 3100 50  0001 C CIN
-F 3 "https://www.infineon.com/dgdl/irf6613pbf.pdf?fileId=5546d462533600a4015355e82b9b1a0d" H 8050 3100 50  0001 L CNN
-	1    8050 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Driver_FET:MCP1415 U?
+L Driver_FET:MCP1415 U2
 U 1 1 5C2CC96E
 P 7300 1200
-F 0 "U?" H 6959 1246 50  0000 R CNN
+F 0 "U2" H 6959 1246 50  0000 R CNN
 F 1 "MCP1415" H 6959 1155 50  0000 R CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7300 600 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 7100 1450 50  0001 C CNN
@@ -115,10 +83,10 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 7100 1450 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Driver_FET:MCP1415 U?
+L Driver_FET:MCP1415 U3
 U 1 1 5C2CC9C0
 P 7300 2150
-F 0 "U?" H 6959 2196 50  0000 R CNN
+F 0 "U3" H 6959 2196 50  0000 R CNN
 F 1 "MCP1415" H 6959 2105 50  0000 R CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7300 1550 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 7100 2400 50  0001 C CNN
@@ -126,10 +94,10 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 7100 2400 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Driver_FET:MCP1415 U?
+L Driver_FET:MCP1415 U4
 U 1 1 5C2CCA02
 P 7300 3100
-F 0 "U?" H 6959 3146 50  0000 R CNN
+F 0 "U4" H 6959 3146 50  0000 R CNN
 F 1 "MCP1415" H 6959 3055 50  0000 R CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7300 2500 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002092F.pdf" H 7100 3350 50  0001 C CNN
@@ -185,12 +153,12 @@ Wire Wire Line
 Wire Wire Line
 	8150 2850 8150 2900
 $Comp
-L SamacSys_Parts:MAX17261METD+ IC?
+L Power-rescue:MAX17261METD+-SamacSys_Parts IC2
 U 1 1 5C2CE787
 P 7750 4850
-F 0 "IC?" H 8350 5115 50  0000 C CNN
+F 0 "IC2" H 8350 5115 50  0000 C CNN
 F 1 "MAX17261METD+" H 8350 5024 50  0000 C CNN
-F 2 "SON40P300X300X80-15N" H 8800 4950 50  0001 L CNN
+F 2 "SamacSys_Parts:SON40P300X300X80-15N" H 8800 4950 50  0001 L CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX17261.pdf" H 8800 4850 50  0001 L CNN
 F 4 "Battery Management 5A Multi-Cell Fuel Gauge with ModelGauge m5 EZ" H 8800 4750 50  0001 L CNN "Description"
 F 5 "0.8" H 8800 4650 50  0001 L CNN "Height"
@@ -204,10 +172,10 @@ F 11 "https://www.mouser.com/Search/Refine.aspx?Keyword=700-MAX17261METD%2B" H 8
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sensor_Current:ACS723xLCTR-10AU U?
+L Sensor_Current:ACS723xLCTR-10AU U5
 U 1 1 5C2CE9A0
 P 9150 1150
-F 0 "U?" H 9150 1728 50  0000 C CNN
+F 0 "U5" H 9150 1728 50  0000 C CNN
 F 1 "ACS723xLCTR-10AU" H 9150 1637 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9250 800 50  0001 L CIN
 F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en" H 9150 1150 50  0001 C CNN
@@ -215,10 +183,10 @@ F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sensor_Current:ACS723xLCTR-10AU U?
+L Sensor_Current:ACS723xLCTR-10AU U6
 U 1 1 5C2CEA24
 P 9150 2100
-F 0 "U?" H 9150 2678 50  0000 C CNN
+F 0 "U6" H 9150 2678 50  0000 C CNN
 F 1 "ACS723xLCTR-10AU" H 9150 2587 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9250 1750 50  0001 L CIN
 F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en" H 9150 2100 50  0001 C CNN
@@ -226,10 +194,10 @@ F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sensor_Current:ACS723xLCTR-10AU U?
+L Sensor_Current:ACS723xLCTR-10AU U7
 U 1 1 5C2CEA70
 P 9150 3050
-F 0 "U?" H 9150 2564 50  0000 C CNN
+F 0 "U7" H 9150 2564 50  0000 C CNN
 F 1 "ACS723xLCTR-10AU" H 9150 2473 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9250 2700 50  0001 L CIN
 F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en" H 9150 3050 50  0001 C CNN
@@ -294,23 +262,23 @@ Wire Wire Line
 Wire Wire Line
 	8750 3250 8750 3150
 $Comp
-L Device:R_Small R?
+L Device:R_Small R6
 U 1 1 5C2D46A9
 P 9550 5350
-F 0 "R?" H 9609 5396 50  0000 L CNN
+F 0 "R6" H 9609 5396 50  0000 L CNN
 F 1 "1.8M" H 9609 5305 50  0000 L CNN
-F 2 "" H 9550 5350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9550 5350 50  0001 C CNN
 F 3 "~" H 9550 5350 50  0001 C CNN
 	1    9550 5350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R7
 U 1 1 5C2D475F
 P 9850 5250
-F 0 "R?" V 10046 5250 50  0000 C CNN
+F 0 "R7" V 10046 5250 50  0000 C CNN
 F 1 "200k" V 9955 5250 50  0000 C CNN
-F 2 "" H 9850 5250 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9850 5250 50  0001 C CNN
 F 3 "~" H 9850 5250 50  0001 C CNN
 	1    9850 5250
 	0    -1   -1   0   
@@ -322,12 +290,12 @@ VBAT
 Wire Wire Line
 	9950 5250 10000 5250
 $Comp
-L Device:C_Small C?
+L Device:C_Small C7
 U 1 1 5C2D6508
 P 9200 5150
-F 0 "C?" V 8971 5150 50  0000 C CNN
+F 0 "C7" V 8971 5150 50  0000 C CNN
 F 1 "0.47u" V 9062 5150 50  0000 C CNN
-F 2 "" H 9200 5150 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9200 5150 50  0001 C CNN
 F 3 "~" H 9200 5150 50  0001 C CNN
 	1    9200 5150
 	0    1    1    0   
@@ -354,12 +322,12 @@ Wire Wire Line
 Wire Wire Line
 	7700 4850 7750 4850
 $Comp
-L Device:R_Small R?
+L Device:R_Small R5
 U 1 1 5C2DC9F7
 P 7750 5650
-F 0 "R?" H 7809 5696 50  0000 L CNN
+F 0 "R5" H 7809 5696 50  0000 L CNN
 F 1 "5m" H 7809 5605 50  0000 L CNN
-F 2 "" H 7750 5650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7750 5650 50  0001 C CNN
 F 3 "~" H 7750 5650 50  0001 C CNN
 	1    7750 5650
 	1    0    0    -1  
@@ -456,44 +424,27 @@ Power & control
 Text Notes 8450 4450 2    118  ~ 0
 Fuel gauge
 $Comp
-L Connector_Generic:Conn_01x02 J?
+L Connector_Generic:Conn_01x02 J1
 U 1 1 5C2FB384
 P 3650 2450
-F 0 "J?" H 3570 2125 50  0000 C CNN
+F 0 "J1" H 3570 2125 50  0000 C CNN
 F 1 "Conn_01x02" H 3570 2216 50  0000 C CNN
-F 2 "" H 3650 2450 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal" H 3650 2450 50  0001 C CNN
 F 3 "~" H 3650 2450 50  0001 C CNN
 	1    3650 2450
 	-1   0    0    1   
 $EndComp
-Text GLabel 3950 2350 2    49   Input ~ 0
+Text GLabel 3950 2450 2    49   Input ~ 0
 BGND
-$Comp
-L Device:Fuse F?
-U 1 1 5C2FEB61
-P 4350 2450
-F 0 "F?" V 4153 2450 50  0000 C CNN
-F 1 "Fuse" V 4244 2450 50  0000 C CNN
-F 2 "" V 4280 2450 50  0001 C CNN
-F 3 "~" H 4350 2450 50  0001 C CNN
-	1    4350 2450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3850 2450 4200 2450
-Wire Wire Line
-	3850 2350 3950 2350
-Text GLabel 4550 2450 2    49   Input ~ 0
+Text GLabel 4950 2350 2    49   Input ~ 0
 VBAT
-Wire Wire Line
-	4500 2450 4550 2450
 $Comp
-L SamacSys_Parts:MP2307DN-LF-Z IC?
+L Power-rescue:MP2307DN-LF-Z-SamacSys_Parts IC1
 U 1 1 5C3044AC
 P 4300 1200
-F 0 "IC?" H 4900 1465 50  0000 C CNN
+F 0 "IC1" H 4900 1465 50  0000 C CNN
 F 1 "MP2307DN-LF-Z" H 4900 1374 50  0000 C CNN
-F 2 "SOIC127P600X170-9N" H 5350 1300 50  0001 L CNN
+F 2 "SamacSys_Parts:SOIC127P600X170-9N" H 5350 1300 50  0001 L CNN
 F 3 "http://www.mouser.com/ds/2/277/MP2307_r1.9-371737.pdf" H 5350 1200 50  0001 L CNN
 F 4 "Switching Voltage Regulators 3A/23VSynchRectified Step-down Converter" H 5350 1100 50  0001 L CNN "Description"
 F 5 "1.7" H 5350 1000 50  0001 L CNN "Height"
@@ -507,67 +458,67 @@ F 11 "https://www.mouser.com/Search/Refine.aspx?Keyword=946-MP2307DNLFZ" H 5350 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R3
 U 1 1 5C30461B
 P 5750 1500
-F 0 "R?" V 5650 1700 50  0000 C CNN
+F 0 "R3" V 5650 1700 50  0000 C CNN
 F 1 "44.2k" V 5650 1500 50  0000 C CNN
-F 2 "" H 5750 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5750 1500 50  0001 C CNN
 F 3 "~" H 5750 1500 50  0001 C CNN
 	1    5750 1500
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R2
 U 1 1 5C304CF7
 P 5650 1700
-F 0 "R?" H 5709 1746 50  0000 L CNN
+F 0 "R2" H 5709 1746 50  0000 L CNN
 F 1 "10k" H 5709 1655 50  0000 L CNN
-F 2 "" H 5650 1700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5650 1700 50  0001 C CNN
 F 3 "~" H 5650 1700 50  0001 C CNN
 	1    5650 1700
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C3
 U 1 1 5C304FFF
 P 4200 1050
-F 0 "C?" V 3971 1050 50  0000 C CNN
+F 0 "C3" V 3971 1050 50  0000 C CNN
 F 1 "10n" V 4062 1050 50  0000 C CNN
-F 2 "" H 4200 1050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4200 1050 50  0001 C CNN
 F 3 "~" H 4200 1050 50  0001 C CNN
 	1    4200 1050
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C6
 U 1 1 5C305073
 P 5950 1700
-F 0 "C?" H 6042 1746 50  0000 L CNN
+F 0 "C6" H 6042 1746 50  0000 L CNN
 F 1 "22u" H 6042 1655 50  0000 L CNN
-F 2 "" H 5950 1700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5950 1700 50  0001 C CNN
 F 3 "~" H 5950 1700 50  0001 C CNN
 	1    5950 1700
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C5
 U 1 1 5C3050D1
 P 5650 1200
-F 0 "C?" V 5421 1200 50  0000 C CNN
+F 0 "C5" V 5421 1200 50  0000 C CNN
 F 1 "0.1u" V 5512 1200 50  0000 C CNN
-F 2 "" H 5650 1200 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5650 1200 50  0001 C CNN
 F 3 "~" H 5650 1200 50  0001 C CNN
 	1    5650 1200
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:L_Small L?
+L Device:L_Small L1
 U 1 1 5C3051DA
 P 3650 1400
-F 0 "L?" V 3835 1400 50  0000 C CNN
+F 0 "L1" V 3835 1400 50  0000 C CNN
 F 1 "10u" V 3744 1400 50  0000 C CNN
-F 2 "" H 3650 1400 50  0001 C CNN
+F 2 "Inductor_SMD:L_Vishay_IHLP-2525" H 3650 1400 50  0001 C CNN
 F 3 "~" H 3650 1400 50  0001 C CNN
 	1    3650 1400
 	0    -1   -1   0   
@@ -625,12 +576,12 @@ BGND
 Wire Wire Line
 	5850 1200 5750 1200
 $Comp
-L Device:R_Small R?
+L Device:R_Small R4
 U 1 1 5C332E2E
 P 5800 1300
-F 0 "R?" V 5800 1750 50  0000 C CNN
+F 0 "R4" V 5800 1750 50  0000 C CNN
 F 1 "100k" V 5800 1550 50  0000 C CNN
-F 2 "" H 5800 1300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5800 1300 50  0001 C CNN
 F 3 "~" H 5800 1300 50  0001 C CNN
 	1    5800 1300
 	0    1    1    0   
@@ -647,4 +598,218 @@ Text Notes 1350 750  2    118  ~ 0
 MCU
 Text Notes 4700 750  2    118  ~ 0
 5V power
+$Comp
+L Device:C_Small C4
+U 1 1 5C3C44BD
+P 5500 1900
+F 0 "C4" H 5592 1946 50  0000 L CNN
+F 1 "3.9n" H 5592 1855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 1900 50  0001 C CNN
+F 3 "~" H 5500 1900 50  0001 C CNN
+	1    5500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5C3C4580
+P 5500 2150
+F 0 "R1" H 5559 2196 50  0000 L CNN
+F 1 "6.8k" H 5559 2105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 2150 50  0001 C CNN
+F 3 "~" H 5500 2150 50  0001 C CNN
+	1    5500 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1400 5500 1500
+Connection ~ 5500 1500
+Wire Wire Line
+	5500 1500 5500 1800
+Wire Wire Line
+	5500 2000 5500 2050
+Text GLabel 5450 2250 0    49   Input ~ 0
+BGND
+Wire Wire Line
+	5450 2250 5500 2250
+Wire Wire Line
+	3850 2450 3950 2450
+$Comp
+L SamacSys_Parts:0154010.DR F1
+U 1 1 5C3D91AA
+P 4050 2350
+F 0 "F1" H 4450 2615 50  0000 C CNN
+F 1 "0154010.DR" H 4450 2524 50  0000 C CNN
+F 2 "SamacSys_Parts:0154001.DRT" H 4700 2450 50  0001 L CNN
+F 3 "http://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_154_154t_154l_154tl_datasheet.pdf.pdf" H 4700 2350 50  0001 L CNN
+F 4 "Fuse SMD OMNI-BLOK FF 10A" H 4700 2250 50  0001 L CNN "Description"
+F 5 "" H 4700 2150 50  0001 L CNN "Height"
+F 6 "LITTELFUSE" H 4700 2050 50  0001 L CNN "Manufacturer_Name"
+F 7 "0154010.DR" H 4700 1950 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "7382867" H 4700 1850 50  0001 L CNN "RS Part Number"
+F 9 "http://uk.rs-online.com/web/p/products/7382867" H 4700 1750 50  0001 L CNN "RS Price/Stock"
+F 10 "70519129" H 4700 1650 50  0001 L CNN "Allied_Number"
+F 11 "https://www.alliedelec.com/littelfuse-0154010-dr/70519129/" H 4700 1550 50  0001 L CNN "Allied Price/Stock"
+F 12 "576-0154010.DR" H 4700 1450 50  0001 L CNN "Mouser Part Number"
+F 13 "https://www.mouser.com/Search/Refine.aspx?Keyword=576-0154010.DR" H 4700 1350 50  0001 L CNN "Mouser Price/Stock"
+	1    4050 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2350 4050 2350
+Wire Wire Line
+	4850 2350 4950 2350
+$Comp
+L Transistor_FET:IRF7403 Q1
+U 1 1 5C3E0D22
+P 8050 1200
+F 0 "Q1" H 8256 1246 50  0000 L CNN
+F 1 "IRF7403" H 8256 1155 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8250 1100 50  0001 L CNN
+F 3 "https://www.infineon.com/dgdl/irf7403pbf.pdf?fileId=5546d462533600a4015355fa23541b9c" H 7950 1200 50  0001 L CNN
+	1    8050 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF7403 Q2
+U 1 1 5C3E0F3E
+P 8050 2150
+F 0 "Q2" H 8256 2196 50  0000 L CNN
+F 1 "IRF7403" H 8256 2105 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8250 2050 50  0001 L CNN
+F 3 "https://www.infineon.com/dgdl/irf7403pbf.pdf?fileId=5546d462533600a4015355fa23541b9c" H 7950 2150 50  0001 L CNN
+	1    8050 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF7403 Q3
+U 1 1 5C3E0FA2
+P 8050 3100
+F 0 "Q3" H 8256 3146 50  0000 L CNN
+F 1 "IRF7403" H 8256 3055 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8250 3000 50  0001 L CNN
+F 3 "https://www.infineon.com/dgdl/irf7403pbf.pdf?fileId=5546d462533600a4015355fa23541b9c" H 7950 3100 50  0001 L CNN
+	1    8050 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5C3E15A9
+P 1300 4500
+F 0 "J2" H 1350 4817 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 1350 4726 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 1300 4500 50  0001 C CNN
+F 3 "~" H 1300 4500 50  0001 C CNN
+	1    1300 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 1050 4400 0    50   Input ~ 0
+MISO
+Text GLabel 1050 4500 0    50   Input ~ 0
+SCK
+Text GLabel 1050 4600 0    50   Input ~ 0
+RESET
+Text GLabel 1650 4400 2    50   Input ~ 0
++5V_MCU
+Text GLabel 1650 4500 2    50   Input ~ 0
+MOSI
+Text GLabel 1650 4600 2    50   Input ~ 0
+GND
+Wire Wire Line
+	1050 4400 1100 4400
+Wire Wire Line
+	1050 4500 1100 4500
+Wire Wire Line
+	1050 4600 1100 4600
+Wire Wire Line
+	1600 4400 1650 4400
+Wire Wire Line
+	1600 4500 1650 4500
+Wire Wire Line
+	1600 4600 1650 4600
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5C3F8ABE
+P 2300 4500
+F 0 "J3" H 2220 4175 50  0000 C CNN
+F 1 "Conn_01x02" H 2220 4266 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2300 4500 50  0001 C CNN
+F 3 "~" H 2300 4500 50  0001 C CNN
+	1    2300 4500
+	-1   0    0    1   
+$EndComp
+Text GLabel 2550 4400 2    50   Input ~ 0
++5V
+Text GLabel 2550 4500 2    50   Input ~ 0
++5V_MCU
+Wire Wire Line
+	2500 4400 2550 4400
+Wire Wire Line
+	2500 4500 2550 4500
+Text GLabel 1600 3850 2    50   Input ~ 0
+GND
+Wire Wire Line
+	1500 3850 1600 3850
+$Comp
+L Device:L_Small L2
+U 1 1 5C40F323
+P 1600 700
+F 0 "L2" V 1785 700 50  0000 C CNN
+F 1 "10u" V 1694 700 50  0000 C CNN
+F 2 "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 1600 700 50  0001 C CNN
+F 3 "~" H 1600 700 50  0001 C CNN
+	1    1600 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 5C40F3C5
+P 1950 850
+F 0 "C8" V 1721 850 50  0000 C CNN
+F 1 "100n" V 1812 850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 850 50  0001 C CNN
+F 3 "~" H 1950 850 50  0001 C CNN
+	1    1950 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1600 600  1500 600 
+Wire Wire Line
+	1500 600  1500 850 
+Wire Wire Line
+	1600 800  1600 850 
+Wire Wire Line
+	1600 850  1850 850 
+Connection ~ 1600 850 
+Text GLabel 2150 850  2    50   Input ~ 0
+GND
+Wire Wire Line
+	2050 850  2150 850 
+Text GLabel 2300 1450 2    50   Input ~ 0
+SCK
+Wire Wire Line
+	2300 1450 2250 1450
+Wire Wire Line
+	2250 1450 2250 1650
+Wire Wire Line
+	2250 1650 2100 1650
+Text GLabel 2300 1350 2    50   Input ~ 0
+MISO
+Text GLabel 2300 1250 2    50   Input ~ 0
+MOSI
+Wire Wire Line
+	2100 1550 2200 1550
+Wire Wire Line
+	2200 1550 2200 1350
+Wire Wire Line
+	2200 1350 2300 1350
+Wire Wire Line
+	2100 1450 2150 1450
+Wire Wire Line
+	2150 1450 2150 1250
+Wire Wire Line
+	2150 1250 2300 1250
+Text GLabel 2150 2650 2    50   Input ~ 0
+RESET
+Wire Wire Line
+	2150 2650 2100 2650
 $EndSCHEMATC

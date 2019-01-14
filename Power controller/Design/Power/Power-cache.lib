@@ -20,6 +20,33 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Generic_Conn_02x03_Odd_Even
+#
+DEF Connector_Generic_Conn_02x03_Odd_Even J 0 40 Y N 1 F N
+F0 "J" 50 200 50 H V C CNN
+F1 "Connector_Generic_Conn_02x03_Odd_Even" 50 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_2x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 150 -150 1 1 10 f
+S 150 -95 100 -105 1 1 6 N
+S 150 5 100 -5 1 1 6 N
+S 150 105 100 95 1 1 6 N
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 300 100 150 L 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 300 0 150 L 50 50 1 1 P
+X Pin_5 5 -200 -100 150 R 50 50 1 1 P
+X Pin_6 6 300 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_C_Small
 #
 DEF Device_C_Small C 0 10 N N 1 F N
@@ -56,24 +83,6 @@ P 2 0 1 20 75 -50 75 50 N
 P 2 0 1 0 100 0 75 0 N
 X 1 1 -150 0 50 R 50 50 1 1 P
 X 2 2 150 0 50 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Fuse
-#
-DEF Device_Fuse F 0 0 N Y 1 F N
-F0 "F" 80 0 50 V V C CNN
-F1 "Device_Fuse" -75 0 50 V V C CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- *Fuse*
-$ENDFPLIST
-DRAW
-S -30 -100 30 100 0 1 10 N
-P 2 0 1 0 0 100 0 -100 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -185,11 +194,11 @@ X PD5 9 600 -1000 100 L 50 50 1 1 T
 ENDDRAW
 ENDDEF
 #
-# SamacSys_Parts_MAX17261METD+
+# Power-rescue_MAX17261METD+-SamacSys_Parts
 #
-DEF SamacSys_Parts_MAX17261METD+ IC 0 30 Y Y 1 F N
+DEF Power-rescue_MAX17261METD+-SamacSys_Parts IC 0 30 Y Y 1 F N
 F0 "IC" 1050 300 50 H V L CNN
-F1 "SamacSys_Parts_MAX17261METD+" 1050 200 50 H V L CNN
+F1 "Power-rescue_MAX17261METD+-SamacSys_Parts" 1050 200 50 H V L CNN
 F2 "SON40P300X300X80-15N" 1050 100 50 H I L CNN
 F3 "https://datasheets.maximintegrated.com/en/ds/MAX17261.pdf" 1050 0 50 H I L CNN
 F4 "Battery Management 5A Multi-Cell Fuel Gauge with ModelGauge m5 EZ" 1050 -100 50 H I L CNN "Description"
@@ -218,11 +227,11 @@ X CSPL 9 1200 -500 200 L 50 50 0 0 B
 ENDDRAW
 ENDDEF
 #
-# SamacSys_Parts_MP2307DN-LF-Z
+# Power-rescue_MP2307DN-LF-Z-SamacSys_Parts
 #
-DEF SamacSys_Parts_MP2307DN-LF-Z IC 0 30 Y Y 1 F N
+DEF Power-rescue_MP2307DN-LF-Z-SamacSys_Parts IC 0 30 Y Y 1 F N
 F0 "IC" 1050 300 50 H V L CNN
-F1 "SamacSys_Parts_MP2307DN-LF-Z" 1050 200 50 H V L CNN
+F1 "Power-rescue_MP2307DN-LF-Z-SamacSys_Parts" 1050 200 50 H V L CNN
 F2 "SOIC127P600X170-9N" 1050 100 50 H I L CNN
 F3 "http://www.mouser.com/ds/2/277/MP2307_r1.9-371737.pdf" 1050 0 50 H I L CNN
 F4 "Switching Voltage Regulators 3A/23VSynchRectified Step-down Converter" 1050 -100 50 H I L CNN "Description"
@@ -242,6 +251,29 @@ X COMP 6 1200 -200 200 L 50 50 0 0 B
 X EN 7 1200 -100 200 L 50 50 0 0 B
 X SS 8 1200 0 200 L 50 50 0 0 B
 X EP 9 600 -800 200 U 50 50 0 0 B
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_0154010.DR
+#
+DEF SamacSys_Parts_0154010.DR F 0 30 Y Y 1 F N
+F0 "F" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_0154010.DR" 650 200 50 H V L CNN
+F2 "0154001.DRT" 650 100 50 H I L CNN
+F3 "http://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_154_154t_154l_154tl_datasheet.pdf.pdf" 650 0 50 H I L CNN
+F4 "Fuse SMD OMNI-BLOK FF 10A" 650 -100 50 H I L CNN "Description"
+F5 "LITTELFUSE" 650 -300 50 H I L CNN "Manufacturer_Name"
+F6 "0154010.DR" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "7382867" 650 -500 50 H I L CNN "RS Part Number"
+F8 "http://uk.rs-online.com/web/p/products/7382867" 650 -600 50 H I L CNN "RS Price/Stock"
+F9 "70519129" 650 -700 50 H I L CNN "Allied_Number"
+F10 "https://www.alliedelec.com/littelfuse-0154010-dr/70519129/" 650 -800 50 H I L CNN "Allied Price/Stock"
+F11 "576-0154010.DR" 650 -900 50 H I L CNN "Mouser Part Number"
+F12 "https://www.mouser.com/Search/Refine.aspx?Keyword=576-0154010.DR" 650 -1000 50 H I L CNN "Mouser Price/Stock"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 B
+X 2 2 800 0 200 L 50 50 0 0 B
 ENDDRAW
 ENDDEF
 #
@@ -269,16 +301,16 @@ X VCC 8 0 400 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Transistor_FET_IRF6613
+# Transistor_FET_IRF7403
 #
-DEF Transistor_FET_IRF6613 Q 0 0 Y N 1 F N
-F0 "Q" 200 75 50 H V L CNN
-F1 "Transistor_FET_IRF6613" 200 0 50 H V L CNN
-F2 "Package_DirectFET:DirectFET_MT" 0 0 50 H I C CIN
-F3 "" 0 0 50 H I L CNN
-ALIAS IRF6618 IRF6726M IRF8301M
+DEF Transistor_FET_IRF7403 Q 0 0 Y N 1 F N
+F0 "Q" 200 100 50 H V L CNN
+F1 "Transistor_FET_IRF7403" 200 0 50 H V L CNN
+F2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" 200 -100 50 H I L CNN
+F3 "" -100 0 50 H I L CNN
+ALIAS IRF7403 FDS2734 FDS6630A
 $FPLIST
- DirectFET*MT*
+ SOIC*3.9x4.9mm*P1.27mm*
 $ENDFPLIST
 DRAW
 C 65 0 111 0 1 10 N
@@ -299,9 +331,14 @@ P 4 0 1 0 40 0 80 15 80 -15 40 0 F
 P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
 P 4 0 1 0 110 20 115 15 145 15 150 10 N
 P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
-X D 1 100 200 100 D 50 50 1 1 P
-X G 2 -200 0 100 R 50 50 1 1 I
-X S 3 100 -200 100 U 50 50 1 1 P
+X S 1 100 -200 100 U 50 50 1 1 P
+X S 2 100 -200 100 U 50 50 1 1 P N
+X S 3 100 -200 100 U 50 50 1 1 P N
+X G 4 -200 0 100 R 50 50 1 1 I
+X D 5 100 200 100 D 50 50 1 1 P N
+X D 6 100 200 100 D 50 50 1 1 P N
+X D 7 100 200 100 D 50 50 1 1 P N
+X D 8 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
