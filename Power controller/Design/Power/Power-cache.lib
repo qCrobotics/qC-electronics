@@ -153,6 +153,7 @@ F0 "U" -500 1450 50 H V L BNN
 F1 "MCU_Microchip_ATmega_ATmega328PB-MU" 100 -1450 50 H V L TNN
 F2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm" 0 0 50 H I C CIN
 F3 "" 0 0 50 H I C CNN
+ALIAS ATmega88PB-MU ATmega168PB-MU ATmega328PB-MU
 $FPLIST
  QFN*1EP*5x5mm*P0.5mm*
 $ENDFPLIST
@@ -194,44 +195,34 @@ X PD5 9 600 -1000 100 L 50 50 1 1 T
 ENDDRAW
 ENDDEF
 #
-# Power-rescue_MAX17261METD+-SamacSys_Parts
+# Power-rescue_0154010.DR-SamacSys_Parts
 #
-DEF Power-rescue_MAX17261METD+-SamacSys_Parts IC 0 30 Y Y 1 F N
-F0 "IC" 1050 300 50 H V L CNN
-F1 "Power-rescue_MAX17261METD+-SamacSys_Parts" 1050 200 50 H V L CNN
-F2 "SON40P300X300X80-15N" 1050 100 50 H I L CNN
-F3 "https://datasheets.maximintegrated.com/en/ds/MAX17261.pdf" 1050 0 50 H I L CNN
-F4 "Battery Management 5A Multi-Cell Fuel Gauge with ModelGauge m5 EZ" 1050 -100 50 H I L CNN "Description"
-F5 "0.8" 1050 -200 50 H I L CNN "Height"
-F6 "Maxim Integrated" 1050 -300 50 H I L CNN "Manufacturer_Name"
-F7 "MAX17261METD+" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
-F8 "700-MAX17261METD+" 1050 -700 50 H I L CNN "Mouser Part Number"
-F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=700-MAX17261METD%2B" 1050 -800 50 H I L CNN "Mouser Price/Stock"
+DEF Power-rescue_0154010.DR-SamacSys_Parts F 0 30 Y Y 1 F N
+F0 "F" 650 300 50 H V L CNN
+F1 "Power-rescue_0154010.DR-SamacSys_Parts" 650 200 50 H V L CNN
+F2 "0154001.DRT" 650 100 50 H I L CNN
+F3 "http://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_154_154t_154l_154tl_datasheet.pdf.pdf" 650 0 50 H I L CNN
+F4 "Fuse SMD OMNI-BLOK FF 10A" 650 -100 50 H I L CNN "Description"
+F5 "LITTELFUSE" 650 -300 50 H I L CNN "Manufacturer_Name"
+F6 "0154010.DR" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "7382867" 650 -500 50 H I L CNN "RS Part Number"
+F8 "http://uk.rs-online.com/web/p/products/7382867" 650 -600 50 H I L CNN "RS Price/Stock"
+F9 "70519129" 650 -700 50 H I L CNN "Allied_Number"
+F10 "https://www.alliedelec.com/littelfuse-0154010-dr/70519129/" 650 -800 50 H I L CNN "Allied Price/Stock"
+F11 "576-0154010.DR" 650 -900 50 H I L CNN "Mouser Part Number"
+F12 "https://www.mouser.com/Search/Refine.aspx?Keyword=576-0154010.DR" 650 -1000 50 H I L CNN "Mouser Price/Stock"
 DRAW
-P 5 0 1 6 200 100 1000 100 1000 -900 200 -900 200 100 N
-X TH 1 0 0 200 R 50 50 0 0 B
-X CELLX 10 1200 -400 200 L 50 50 0 0 B
-X REG 11 1200 -300 200 L 50 50 0 0 B
-X ALRT 12 1200 -200 200 L 50 50 0 0 B
-X SDA 13 1200 -100 200 L 50 50 0 0 B
-X SCL 14 1200 0 200 L 50 50 0 0 B
-X EP 15 600 -1100 200 U 50 50 0 0 B
-X NC_1 2 0 -100 200 R 50 50 0 0 B
-X SW 3 0 -200 200 R 50 50 0 0 B
-X NC_2 4 0 -300 200 R 50 50 0 0 B
-X NC_3 5 0 -400 200 R 50 50 0 0 B
-X BATT 6 0 -500 200 R 50 50 0 0 B
-X CSN 7 0 -600 200 R 50 50 0 0 B
-X GND 8 1200 -600 200 L 50 50 0 0 B
-X CSPL 9 1200 -500 200 L 50 50 0 0 B
+P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 B
+X 2 2 800 0 200 L 50 50 0 0 B
 ENDDRAW
 ENDDEF
 #
-# Power-rescue_MP2307DN-LF-Z-SamacSys_Parts
+# Power-rescue_MP2307DN-LF-Z-SamacSys_Parts-Power-rescue
 #
-DEF Power-rescue_MP2307DN-LF-Z-SamacSys_Parts IC 0 30 Y Y 1 F N
+DEF Power-rescue_MP2307DN-LF-Z-SamacSys_Parts-Power-rescue IC 0 30 Y Y 1 F N
 F0 "IC" 1050 300 50 H V L CNN
-F1 "Power-rescue_MP2307DN-LF-Z-SamacSys_Parts" 1050 200 50 H V L CNN
+F1 "Power-rescue_MP2307DN-LF-Z-SamacSys_Parts-Power-rescue" 1050 200 50 H V L CNN
 F2 "SOIC127P600X170-9N" 1050 100 50 H I L CNN
 F3 "http://www.mouser.com/ds/2/277/MP2307_r1.9-371737.pdf" 1050 0 50 H I L CNN
 F4 "Switching Voltage Regulators 3A/23VSynchRectified Step-down Converter" 1050 -100 50 H I L CNN "Description"
@@ -251,29 +242,6 @@ X COMP 6 1200 -200 200 L 50 50 0 0 B
 X EN 7 1200 -100 200 L 50 50 0 0 B
 X SS 8 1200 0 200 L 50 50 0 0 B
 X EP 9 600 -800 200 U 50 50 0 0 B
-ENDDRAW
-ENDDEF
-#
-# SamacSys_Parts_0154010.DR
-#
-DEF SamacSys_Parts_0154010.DR F 0 30 Y Y 1 F N
-F0 "F" 650 300 50 H V L CNN
-F1 "SamacSys_Parts_0154010.DR" 650 200 50 H V L CNN
-F2 "0154001.DRT" 650 100 50 H I L CNN
-F3 "http://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_154_154t_154l_154tl_datasheet.pdf.pdf" 650 0 50 H I L CNN
-F4 "Fuse SMD OMNI-BLOK FF 10A" 650 -100 50 H I L CNN "Description"
-F5 "LITTELFUSE" 650 -300 50 H I L CNN "Manufacturer_Name"
-F6 "0154010.DR" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
-F7 "7382867" 650 -500 50 H I L CNN "RS Part Number"
-F8 "http://uk.rs-online.com/web/p/products/7382867" 650 -600 50 H I L CNN "RS Price/Stock"
-F9 "70519129" 650 -700 50 H I L CNN "Allied_Number"
-F10 "https://www.alliedelec.com/littelfuse-0154010-dr/70519129/" 650 -800 50 H I L CNN "Allied Price/Stock"
-F11 "576-0154010.DR" 650 -900 50 H I L CNN "Mouser Part Number"
-F12 "https://www.mouser.com/Search/Refine.aspx?Keyword=576-0154010.DR" 650 -1000 50 H I L CNN "Mouser Price/Stock"
-DRAW
-P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
-X 1 1 0 0 200 R 50 50 0 0 B
-X 2 2 800 0 200 L 50 50 0 0 B
 ENDDRAW
 ENDDEF
 #
